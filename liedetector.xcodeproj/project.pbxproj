@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		884A3C9E2ADB79A2001F96E1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884A3C9D2ADB79A2001F96E1 /* main.swift */; };
+		884A3CA62ADB79E0001F96E1 /* q20kshare in Frameworks */ = {isa = PBXBuildFile; productRef = 884A3CA52ADB79E0001F96E1 /* q20kshare */; };
+		884A3CA92ADB7A08001F96E1 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 884A3CA82ADB7A08001F96E1 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,7 @@
 /* Begin PBXFileReference section */
 		884A3C9A2ADB79A2001F96E1 /* liedetector */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = liedetector; sourceTree = BUILT_PRODUCTS_DIR; };
 		884A3C9D2ADB79A2001F96E1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		884A3CAE2ADB7DC7001F96E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884A3CA92ADB7A08001F96E1 /* ArgumentParser in Frameworks */,
+				884A3CA62ADB79E0001F96E1 /* q20kshare in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +46,7 @@
 		884A3C912ADB79A1001F96E1 = {
 			isa = PBXGroup;
 			children = (
+				884A3CAE2ADB7DC7001F96E1 /* README.md */,
 				884A3C9C2ADB79A2001F96E1 /* liedetector */,
 				884A3C9B2ADB79A2001F96E1 /* Products */,
 			);
@@ -78,6 +84,10 @@
 			dependencies = (
 			);
 			name = liedetector;
+			packageProductDependencies = (
+				884A3CA52ADB79E0001F96E1 /* q20kshare */,
+				884A3CA82ADB7A08001F96E1 /* ArgumentParser */,
+			);
 			productName = liedetector;
 			productReference = 884A3C9A2ADB79A2001F96E1 /* liedetector */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +116,10 @@
 				Base,
 			);
 			mainGroup = 884A3C912ADB79A1001F96E1;
+			packageReferences = (
+				884A3CA42ADB79E0001F96E1 /* XCRemoteSwiftPackageReference "q20kshare" */,
+				884A3CA72ADB7A08001F96E1 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = 884A3C9B2ADB79A2001F96E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,6 +303,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		884A3CA42ADB79E0001F96E1 /* XCRemoteSwiftPackageReference "q20kshare" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/billdonner/q20kshare";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.9;
+			};
+		};
+		884A3CA72ADB7A08001F96E1 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		884A3CA52ADB79E0001F96E1 /* q20kshare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 884A3CA42ADB79E0001F96E1 /* XCRemoteSwiftPackageReference "q20kshare" */;
+			productName = q20kshare;
+		};
+		884A3CA82ADB7A08001F96E1 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 884A3CA72ADB7A08001F96E1 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 884A3C922ADB79A1001F96E1 /* Project object */;
 }
